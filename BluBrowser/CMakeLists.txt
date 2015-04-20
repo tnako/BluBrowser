@@ -8,12 +8,7 @@
 set(CMAKE_CXX_FLAGS "-fpermissive -std=c++0x")
 # cefsimple sources.
 set(CEFSIMPLE_SRCS
-  blubrowser_app.cpp
-  blubrowser_app.h
-  blu_handler.cpp
-  blu_handler.h
-  script_handler.cpp
-  script_handler.h
+  blubrowser_app.cpp  blubrowser_app.h  blu_handler.cpp  blu_handler.h  script_handler.cpp  script_handler.h
   )
 set(CEFSIMPLE_SRCS_LINUX
   cefsimple_linux.cc
@@ -21,14 +16,11 @@ set(CEFSIMPLE_SRCS_LINUX
   )
 set(CEFSIMPLE_SRCS_MACOSX
   cefsimple_mac.mm
-  simple_handler_mac.mm
+  blu_handler_mac.mm
   )
 set(CEFSIMPLE_SRCS_WINDOWS
   cefsimple.exe.manifest
-  blu.rc
-  blubrowser_win.cpp
-  resource.h
-  blu_handler_win.cpp
+  blu.rc  blubrowser_win.cpp  resource.h  blu_handler_win.cpp
   )
 APPEND_PLATFORM_SOURCES(CEFSIMPLE_SRCS)
 source_group(cefsimple FILES ${CEFSIMPLE_SRCS})
@@ -47,7 +39,7 @@ set(CEFSIMPLE_SRCS
 
 # cefsimple helper sources.
 set(CEFSIMPLE_HELPER_SRCS_MACOSX
-  process_helper_mac.cpp
+  process_helper_mac.cc
   )
 APPEND_PLATFORM_SOURCES(CEFSIMPLE_HELPER_SRCS)
 source_group(cefsimple FILES ${CEFSIMPLE_HELPER_SRCS})
